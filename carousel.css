@@ -1,0 +1,880 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  height: 2100px;
+  padding-bottom: 3rem;
+  color: rgb(var(--bs-tertiary-color-rgb));
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #E7D4B5;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+/* rtl:end:remove */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.btn-bd-primary {
+  --bd-violet-bg: #712cf9;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #6528e0;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+}
+
+.header {
+  width: 100;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000000;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 40px;
+  /* border: 1px solid #fff; */
+}
+
+.logo p {
+  height: 40px;
+  margin-top: 20px;
+  margin-right: 600px;
+  color: #fff;
+  /* border: 1px solid #fff; */
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 71px;
+  transition: width 0.4s;
+}
+
+body.open .sidebar {
+  width: 300px;
+  height: 100vh;
+}
+
+.sidebar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  height: 102vh;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 0 1.25rem 0 0;
+}
+
+.sidebar-header button {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  width: 72px;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  line-height: 1;
+  /* border: 1px solid #ffff; */
+}
+
+.sidebar-header button > i {
+  align-items: center;
+  margin-left: 28px;
+}
+
+.sidebar-header button > a {
+  color: #ffffff;
+  opacity: 0;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+body.open .sidebar-header button>a {
+  opacity: 1;
+  animation: appear 0.3s both;
+}
+
+/* .sidebar-logo {
+  height: 20px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+body.open .sidebar-logo {
+  opacity: 1;
+} */
+
+.sidebar-nav {
+  padding-top: 10px;
+  flex: 1 1 auto;
+  background-color: #A0937D;
+  opacity: 80%;
+}
+
+.sidebar-nav button {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  height: 50px;
+  width: 72px;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  line-height: 1;
+  padding: 0 25px;
+  /* border: 1px solid #ffff; */
+}
+
+.sidebar-nav button > img {
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar-nav button > a {
+  color: #000000;
+  opacity: 0;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+body.open .sidebar-nav button>a {
+  opacity: 1;
+  animation: appear 0.3s both;
+}
+
+.fa-duotome {
+  size: 20px;
+}
+
+.img-sidebar {
+  width: 40px;
+  height: auto;
+  /* border: 1px solid #fff; */
+}
+
+.d-flex > input {
+  width: 200px;
+  height: 32px;
+  margin-top: 5px;
+}
+
+.d-flex > button {
+  width: 80px;  
+  height: 32px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin-right: 20px;
+}
+
+.container.marketing {
+  height: 250px;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid #000; */
+}
+
+.container.marketing::-webkit-scrollbar { 
+  display: none;
+}
+
+.row.row-cols-1.row-cols-md-3.g-4 {
+  display: flex; 
+  justify-content: center;
+  height: 300px;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  width: max-content;
+}
+
+.col {
+  width: 250px;
+  height: 200px;
+  margin-top: 0px;
+}
+.col-1 {
+  width: 250px;
+  height: 200px;
+  margin-top: 0px;
+}
+.col-2 {
+  width: 250px;
+  height: 200px;
+  margin-top: 0px;
+}
+.col-3 {
+  width: 250px;
+  height: 200px;
+  margin-top: 0px;
+}
+
+.card.h-100.cm-0 {
+  background-image: url(./surviva0.jpg);
+  cursor: pointer;
+  background-size: 225px;
+  background-repeat: no-repeat;
+  
+}
+.card.h-100.cm-1 {
+  background-image: url(./rpg0.jpg);
+  cursor: pointer;
+  background-size: 225px;
+  background-repeat: no-repeat;
+}
+.card.h-100.cm-2 {
+  background-image: url(./horor0.jpg);
+  cursor: pointer;
+  background-size: 225px;
+  background-repeat: no-repeat;
+}
+.card.h-100.cm-3 {
+  background-image: url(./kasula0.jpg);
+  cursor: pointer;
+  background-size: 225px;
+  background-repeat: no-repeat;
+}
+.card.h-100.cm-4 {
+  background-image: url(./action.jpg);
+  cursor: pointer;
+  background-size: 225px;
+  background-repeat: no-repeat;
+}
+.card.h-100.cm-5 {
+  background-image: url(./sport1.jpg);
+  cursor: pointer;
+  background-size: 225px;
+  background-repeat: no-repeat;
+}
+
+.card-body-1 {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body-1 > figcaption {
+  position: absolute;
+  bottom: -3rem;
+  background-color: rgba(0, 0, 0, 0.511);
+  padding: 0.5rem 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  transition: all 200ms;
+  font-weight: bold;
+}
+
+.card-body-1:hover > figcaption {
+  bottom: 0;
+}
+
+.card-body-1 > figcaption > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.gradient.md-1 {
+  background: linear-gradient(rgba(0,0,0,0),rgb(130,0,0))150%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.gradient.md-2 {
+  background: linear-gradient(rgba(0,0,0,0),rgb(0, 69, 165)150%);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.gradient.md-3 {
+  background: linear-gradient(rgba(0,0,0,0),rgb(128, 132, 0))150%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.gradient.md-4 {
+  background: linear-gradient(rgba(0,0,0,0),rgb(141, 0, 151))150%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.gradient.md-5 {
+  background: linear-gradient(rgba(0,0,0,0),rgb(0, 131, 151))150%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.gradient.md-6 {
+  background: linear-gradient(rgba(0, 0, 0, 0),rgb(0, 151, 3))100%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card-text {
+  margin-bottom: 5px;
+}
+
+.btn.btn-primary {
+  margin-left: 550px;
+  margin-bottom: 10px;
+}
+
+.btn.btn-primary-md.btn-footer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  font-size: 18px;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+}
+
+.btn-primary-md {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #0d6efd;
+  --bs-btn-border-color: #0d6efd;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0b5ed7;
+  --bs-btn-hover-border-color: #0a58ca;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #0a58ca;
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #0d6efd;
+  --bs-btn-disabled-border-color: #0d6efd;
+}
+
+.container-card {
+  /* border: 1px solid #000000; */
+  border-radius: 20px;  
+  padding-top: 20px;
+  background-color: #F6E6CB;
+}
+
+.card-body > h5 {
+  margin-bottom: 1px;
+}
+
+.edit-card {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.contain-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 570px;
+}
+.contain-md {
+  height: 460px;
+}
+.contain-md-1 {
+  display: flex;
+}
+
+.contain-md-2 {
+  display: flex;
+}
+/* Styling untuk kartu */
+.card-pn {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efek hover pada kartu */
+.card-pn:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+/* Styling untuk kartu */
+.card-pn-1 {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efek hover pada kartu */
+.card-pn-1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+/* Styling untuk kartu */
+.card-pn-2 {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efek hover pada kartu */
+.card-pn-2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+/* Styling untuk kartu */
+.card-pn-3 {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efek hover pada kartu */
+.card-pn-3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+/* Styling untuk kartu */
+.card-pn-4 {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efek hover pada kartu */
+.card-pn-4:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-pn {
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  width: 300px;
+  height: 460px;
+  margin: 0 0 10px 0;
+}
+.card-pn-1 {
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  width: 300px;
+  height: 220px;
+  margin: 0 0 20px 20px;
+}
+.card-pn-2 {
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  width: 300px;
+  height: 220px;
+  margin: 0 0 20px 20px;
+}
+.card-pn-3 {
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  width: 300px;
+  height: 220px;
+  margin: 0 0 20px 20px;
+}
+.card-pn-4 {
+  border: 1px solid #c1c1c1;
+  border-radius: 10px;
+  width: 300px;
+  height: 220px;
+  margin: 0 0 20px 20px;
+}
+
+.card-pn-1 > .card-body {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.card-pn-2 > .card-body {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.card-pn-3 > .card-body {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.card-pn-4 > .card-body {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-pn > .card-body > .card-text {
+  font-size: 24px;
+}
+.card-pn-1 > .card-body > .card-text {
+  font-size: 24px;
+}
+.card-pn-2 > .card-body > .card-text {
+  font-size: 24px;
+}
+.card-pn-3 > .card-body > .card-text {
+  font-size: 24px;
+}
+.card-pn-4 > .card-body > .card-text {
+  font-size: 24px;
+}
+
+.edit {
+  height: 240px;
+}
+.edit-cnt {
+  width: 640px;
+}
+.edit-n{
+  width: 300px;
+}
+
+.py-5{
+  height: 350px;
+}
+
+.card-sen {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-first {
+  width: 900px;
+  border: 1px solid #b6b6b6;
+  border-radius: 10px;
+}
+.col-md-4 {
+  width: 200px;
+}
+.col-md-4 >img {
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: cover;
+}
+
+.col-md-8 {
+  margin-left: 20px;
+  width: 560px;
+}
+
+.col-md-6 {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-md-6 > p {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.row.g-0 {
+  width: 983px;
+}
+
+.card.mb-3 {
+  border: none;
+
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efek hover pada kartu */
+.card.mb-3:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-text {
+  display: flex;
+  width: 500px;
+}
+
+.card-img-sec {
+  height: 380px;
+  display: flex;
+  width: 300px;  
+
+}
+
+.d-flex.flex-column.flex-sm-row.justify-content-between.py-4.my-4.border-top{
+  max-height: 20px;
+  height: 20px;
+  margin: none;
+  padding: none;
+}
+.col-6.col-md-2.mb-3 .cs {
+  margin-left: 20px;
+  margin-bottom: none;
+}
+
+.col-md-5 {
+  width: 425px;
+  margin-right: 20px;
+}
+.row-footer {
+  width: 1170px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn.btn-primary.btn-footer  {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  font-size: 18px;
+}
+
+.col-main {
+  width: 250px;
+  border: 1px solid #000000;
+
+}
+
+.col-lg-4 {
+  width: 300px;
+  margin-left: 80px;
+}
+
+.card-price-edit {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4c4c4c;
+}
+.card-price-edit > h6 {
+  margin: 0;
+  color: #fff;
+}
+
+.edit-cr {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+.edit-cr > figcaption {
+  margin-bottom: 30px;
+  width: 400px;
+}
+
+.card-cr > .detail {
+  width: 150px;
+  background-color: #4c4c4c;
+  margin: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: color 2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efek hover pada kartu */
+.detail:hover {
+  background-color: #b2b2b2ff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+.card-cr .detail > a {
+  text-decoration: none;
+  color: #fff;
+  width: 150px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-indicators [data-bs-target] {
+      transition: none;
+  }
+}
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
